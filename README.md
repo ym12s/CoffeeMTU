@@ -15,7 +15,7 @@ CoffeeMTU là một hệ thống quản lý quán cà phê, giúp tối ưu hóa
 - Gộp/tách bàn, chuyển bàn
 
 ### 3. **Quản Lý Kho**
-- Theo dõi tồn kho nguyên liệu
+- Theo dõi tồn kho nguyên liệu`
 - Nhập/xuất nguyên liệu
 
 ### 4. **Quản Lý Nhân Viên**
@@ -54,6 +54,6 @@ python Coffee.py
 - **Tên dự án**: CoffeeMTU
 - **Thực hiện bởi**: Khang , Nhân
 
-## Liên Hệ
+## Nếu muốn góp ý vui lòng liên hệ
 l: [ym12snake@gmail.com],[ltnhankp22d01@mtu.edu.vn]
 
