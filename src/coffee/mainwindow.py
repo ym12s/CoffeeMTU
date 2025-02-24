@@ -5,59 +5,30 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
 sys.stdout.reconfigure(encoding="utf-8")
 from PySide6.QtWidgets import (QApplication, QMainWindow,
                                 QButtonGroup, QLabel, QWidget,
-                                QLineEdit, QVBoxLayout,
-                                QGraphicsScene, QGraphicsPixmapItem, QGraphicsView)
+                                QLineEdit, QVBoxLayout, QHBoxLayout
+                                )
 from PySide6.QtGui import QIcon, QPixmap, QAction, QPainter, QPainterPath
 from PySide6.QtCore import QSize, Qt, QTimer
 from src.__ui.ui_mainwindow import Ui_MainWindow
 from src.coffee.Ym12 import ym12s
-
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.setWindowIcon(QIcon("src/__ass/icon.ico"))
-        self.setWindowTitle("Quản lí cà phê")
+        self.setWindowTitle("Quản lí cà phê")  
+        QTimer.singleShot(5, self.diChuyenBtn)
+        self.formload()
+        self.themAnh()
+    def formload (self):
+        self.anh = ym12s("src/__ass/ym12.png", self.ui.test)
+        self.anh.setGeometry(0, 0, self.ui.test.width(), self.ui.test.height())
         
-        QTimer.singleShot(0, self.update_button_position)
-        self.add_images()
-    def add_images(self):
-        print(f"✅ self.menuWidget: {self.ui.menuWidget}")  # Debug kiểm tra
-        image_dir = os.path.join(os.getcwd(), "src", "ass")
-        for i in range(10):
-            image_path = os.path.join(image_dir, f"name{i+1}.png")
-            print(f"Loading image: {image_path}")
-
-            pixmap = QPixmap(image_path)
-            if pixmap.isNull():
-                print(f"Không thể load ảnh: {image_path}")
-                continue
-
-            label = QLabel(self.ui.menuWidget)
-            label.setPixmap(pixmap.scaled(100, 100))
-            label.setFixedSize(100, 100)
-            label.move(i * 110, 0)
-
-                
-        self.anh = [ym12s("src/__ass/ym12.png", self.ui.test),
-                    ym12s("src/__ass/matcha.jpg", self.ui.test1),
-                    ym12s("src/__ass/cf.jpg", self.ui.test2)]
-        for i in self.anh:
-            i.setGeometry(0, 0, i.parent().width(), i.parent().height())
-        self.ui.test.resizeEvent = self.update_image_size
-        self.ui.test1.resizeEvent = self.update_image_size
-        self.ui.test2.resizeEvent = self.update_image_size
-        
-        self.move_widget_up(10)
         self.ui.centralwidget.layout().setContentsMargins(0, 0, 0, 0)
         self.ui.centralwidget.layout().setSpacing(0)
-     
-        
         self.ui.panelMid.layout().setContentsMargins(0, 0, 0, 0)
         self.ui.panelMid.layout().setSpacing(0)
-        
         search_action = QAction(QIcon("src/__ass/search.png"), "", self)
         self.ui.txtTimKiem.addAction(search_action, QLineEdit.ActionPosition.LeadingPosition)
         self.ui.btnMenu.setIcon(QIcon("src/__ass/menu-button-white.png"))
@@ -78,12 +49,35 @@ class MainWindow(QMainWindow):
             btn.setCheckable(True)
             self.buttonGroup.addButton(btn)
         self.buttons[0].setChecked(True)
-        
-    def resizeEvent(self, event):
-        self.update_button_position()
-        super().resizeEvent(event)
+    def themAnh(self):
+        anhFolder = os.path.join(os.getcwd(), "src", "ass")
+        self.anh = []
+        for i in range(10):
+            dcAnh = os.path.join(anhFolder, f"name{i+1}.png")
+            print(f"Ảnh thứ [{i+1}] tải lên 100%")
 
-    def update_button_position(self):
+            if not os.path.exists(dcAnh):
+                print(f"Không tìm thấy ảnh tại: {dcAnh}")
+                continue
+
+            widgetAnh = f'test{i+1}'
+            if not hasattr(self.ui, widgetAnh):
+                print(f"Không tìm thấy widget: {widgetAnh}")
+                continue
+
+            pixmap = QPixmap(dcAnh)
+            if pixmap.isNull():
+                print(f"Không thể tải ảnh tại: {dcAnh}")
+                continue
+
+            label = ym12s(dcAnh, getattr(self.ui, widgetAnh))
+            label.setGeometry(0, 0, label.parent().width(), label.parent().height())
+            label.parent().resizeEvent = self.capNhatSizeAnh
+            self.anh.append(label)
+    def resizeEvent(self, event):
+        self.diChuyenBtn()
+        super().resizeEvent(event)
+    def diChuyenBtn(self):
         panelLeftW = self.ui.paneleft.width()
         panelLeftH = self.ui.paneleft.height()
 
@@ -97,24 +91,16 @@ class MainWindow(QMainWindow):
         btnPlayH = self.ui.btnPlay.height()
         
         x1 = (panelLeftW - btnHelpW) // 2  
-        y1 = panelLeftH - btnHelpH - 10  # Cách bottom 10px
+        y1 = panelLeftH - btnHelpH - 10 
         self.ui.btnHelp.move(x1, y1)
 
         x2 = (panelMidW - btnPlayW) - 5 
-        y2 = (panelMidH - btnPlayH) // 1  # Đặt giữa panelMidM
-        self.ui.btnPlay.move(x2, y2)
-        
-        
-    def move_widget_up(self, offset=10):
-        x, y, w, h = self.ui.test.geometry().getRect() 
-        self.ui.test.setGeometry(x, y - offset, w, h)      
-        
-    def update_image_size(self, event):
+        y2 = (panelMidH - btnPlayH) // 1 
+        self.ui.btnPlay.move(x2, y2)    
+    def capNhatSizeAnh(self, event):
         for i in self.anh:
             i.setGeometry(0, 0, i.parent().width(), i.parent().height())
-
-
-    def load_styles(self):
+    def loadCSS(self):
         try:
             with open("src/__ui/style.json", "r", encoding="utf-8") as f:
                 styles = json.load(f)

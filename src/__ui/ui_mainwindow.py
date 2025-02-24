@@ -275,7 +275,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.test.sizePolicy().hasHeightForWidth())
         self.test.setSizePolicy(sizePolicy)
         self.test.setMinimumSize(QSize(200, 232))
-        self.test.setMaximumSize(QSize(250, 232))
+        self.test.setMaximumSize(QSize(288, 232))
         self.test.setStyleSheet(u"")
 
         self.horizontalLayout_3.addWidget(self.test)
@@ -284,7 +284,7 @@ class Ui_MainWindow(object):
         self.panelMidM.setObjectName(u"panelMidM")
         self.label_2 = QLabel(self.panelMidM)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(20, 10, 361, 41))
+        self.label_2.setGeometry(QRect(20, 10, 311, 41))
         font3 = QFont()
         font3.setFamilies([u"Segoe UI"])
         font3.setPointSize(12)
@@ -313,6 +313,15 @@ class Ui_MainWindow(object):
 " background-color: rgb(239, 50, 104);\n"
 " color: white;\n"
 "}")
+        self.label_3 = QLabel(self.panelMidM)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(0, 50, 401, 41))
+        font4 = QFont()
+        font4.setFamilies([u"Segoe UI"])
+        font4.setPointSize(12)
+        font4.setBold(False)
+        font4.setHintingPreference(QFont.PreferFullHinting)
+        self.label_3.setFont(font4)
 
         self.horizontalLayout_3.addWidget(self.panelMidM)
 
@@ -344,13 +353,93 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 682, 506))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 682, 2410))
         self.gridLayout = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout.setObjectName(u"gridLayout")
         self.menuWidget = QWidget(self.scrollAreaWidgetContents)
         self.menuWidget.setObjectName(u"menuWidget")
-        self.horizontalLayout_4 = QHBoxLayout(self.menuWidget)
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.verticalLayout = QVBoxLayout(self.menuWidget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.test8 = QWidget(self.menuWidget)
+        self.test8.setObjectName(u"test8")
+        self.test8.setMinimumSize(QSize(288, 232))
+        self.test8.setMaximumSize(QSize(288, 232))
+        self.test8.setStyleSheet(u"")
+
+        self.verticalLayout.addWidget(self.test8)
+
+        self.test9 = QWidget(self.menuWidget)
+        self.test9.setObjectName(u"test9")
+        self.test9.setMinimumSize(QSize(288, 232))
+        self.test9.setMaximumSize(QSize(288, 232))
+        self.test9.setStyleSheet(u"")
+
+        self.verticalLayout.addWidget(self.test9)
+
+        self.test10 = QWidget(self.menuWidget)
+        self.test10.setObjectName(u"test10")
+        self.test10.setMinimumSize(QSize(288, 232))
+        self.test10.setMaximumSize(QSize(288, 232))
+        self.test10.setStyleSheet(u"")
+
+        self.verticalLayout.addWidget(self.test10)
+
+        self.test2 = QWidget(self.menuWidget)
+        self.test2.setObjectName(u"test2")
+        self.test2.setMinimumSize(QSize(288, 232))
+        self.test2.setMaximumSize(QSize(288, 232))
+        self.test2.setStyleSheet(u"")
+
+        self.verticalLayout.addWidget(self.test2)
+
+        self.test7 = QWidget(self.menuWidget)
+        self.test7.setObjectName(u"test7")
+        self.test7.setMinimumSize(QSize(288, 232))
+        self.test7.setMaximumSize(QSize(288, 232))
+        self.test7.setStyleSheet(u"")
+
+        self.verticalLayout.addWidget(self.test7)
+
+        self.test4 = QWidget(self.menuWidget)
+        self.test4.setObjectName(u"test4")
+        self.test4.setMinimumSize(QSize(288, 232))
+        self.test4.setMaximumSize(QSize(288, 232))
+        self.test4.setStyleSheet(u"background-color: rgb(255, 185, 242);")
+
+        self.verticalLayout.addWidget(self.test4)
+
+        self.test5 = QWidget(self.menuWidget)
+        self.test5.setObjectName(u"test5")
+        self.test5.setMinimumSize(QSize(288, 232))
+        self.test5.setMaximumSize(QSize(288, 232))
+        self.test5.setStyleSheet(u"background-color: rgb(255, 185, 242);")
+
+        self.verticalLayout.addWidget(self.test5)
+
+        self.test6 = QWidget(self.menuWidget)
+        self.test6.setObjectName(u"test6")
+        self.test6.setMinimumSize(QSize(288, 232))
+        self.test6.setMaximumSize(QSize(288, 232))
+        self.test6.setStyleSheet(u"background-color: rgb(255, 185, 242);")
+
+        self.verticalLayout.addWidget(self.test6)
+
+        self.test1 = QWidget(self.menuWidget)
+        self.test1.setObjectName(u"test1")
+        self.test1.setMinimumSize(QSize(288, 232))
+        self.test1.setMaximumSize(QSize(288, 232))
+        self.test1.setStyleSheet(u"background-color: rgb(255, 185, 242);")
+
+        self.verticalLayout.addWidget(self.test1)
+
+        self.test3 = QWidget(self.menuWidget)
+        self.test3.setObjectName(u"test3")
+        self.test3.setMinimumSize(QSize(288, 232))
+        self.test3.setMaximumSize(QSize(288, 232))
+        self.test3.setStyleSheet(u"background-color: rgb(255, 185, 242);")
+
+        self.verticalLayout.addWidget(self.test3)
+
 
         self.gridLayout.addWidget(self.menuWidget, 0, 0, 1, 1)
 
@@ -384,22 +473,6 @@ class Ui_MainWindow(object):
         self.widget_2.setStyleSheet(u"background-color: rgb(247, 249, 255);")
         self.horizontalLayout_5 = QHBoxLayout(self.widget_2)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.test1 = QWidget(self.widget_2)
-        self.test1.setObjectName(u"test1")
-        self.test1.setMinimumSize(QSize(288, 0))
-        self.test1.setMaximumSize(QSize(288, 232))
-        self.test1.setStyleSheet(u"background-color: rgb(255, 185, 242);")
-
-        self.horizontalLayout_5.addWidget(self.test1)
-
-        self.test2 = QWidget(self.widget_2)
-        self.test2.setObjectName(u"test2")
-        self.test2.setMinimumSize(QSize(288, 0))
-        self.test2.setMaximumSize(QSize(288, 232))
-        self.test2.setStyleSheet(u"")
-
-        self.horizontalLayout_5.addWidget(self.test2)
-
 
         self.horizontalLayout.addWidget(self.widget_2)
 
@@ -421,5 +494,6 @@ class Ui_MainWindow(object):
         self.lblCoffee_4.setText(QCoreApplication.translate("MainWindow", u"C\u00e0 ph\u00ea \u0111\u1eadm \u2013 debug ch\u1eadm c\u0169ng th\u00e0nh nhanh!", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"H\u00c3Y CHO CON CH\u1ecaU \u0110AU KH\u1ed4 THAY EM", None))
         self.btnPlay.setText(QCoreApplication.translate("MainWindow", u"PLAY", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Lil Liem & ekkososa (feat. Kewwi, KIDDI) x Kidsai x Eren Ver", None))
     # retranslateUi
 
