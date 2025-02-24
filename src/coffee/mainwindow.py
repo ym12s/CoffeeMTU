@@ -22,7 +22,25 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Quản lí cà phê")
         
         QTimer.singleShot(0, self.update_button_position)
-        
+        self.add_images()
+    def add_images(self):
+        print(f"✅ self.menuWidget: {self.ui.menuWidget}")  # Debug kiểm tra
+        image_dir = os.path.join(os.getcwd(), "src", "ass")
+        for i in range(10):
+            image_path = os.path.join(image_dir, f"name{i+1}.png")
+            print(f"Loading image: {image_path}")
+
+            pixmap = QPixmap(image_path)
+            if pixmap.isNull():
+                print(f"Không thể load ảnh: {image_path}")
+                continue
+
+            label = QLabel(self.ui.menuWidget)
+            label.setPixmap(pixmap.scaled(100, 100))
+            label.setFixedSize(100, 100)
+            label.move(i * 110, 0)
+
+                
         self.anh = [ym12s("src/__ass/ym12.png", self.ui.test),
                     ym12s("src/__ass/matcha.jpg", self.ui.test1),
                     ym12s("src/__ass/cf.jpg", self.ui.test2)]

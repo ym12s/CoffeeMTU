@@ -630,7 +630,7 @@ QPushButton:checked{
            </widget>
           </item>
           <item>
-           <widget class="QWidget" name="widget_10" native="true">
+           <widget class="QWidget" name="menuMain" native="true">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -665,60 +665,31 @@ QPushButton:checked{
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item alignment="Qt::AlignmentFlag::AlignRight">
-              <widget class="QWidget" name="test1" native="true">
-               <property name="minimumSize">
-                <size>
-                 <width>288</width>
-                 <height>0</height>
-                </size>
+             <item>
+              <widget class="QScrollArea" name="scrollArea">
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
                </property>
-               <property name="maximumSize">
-                <size>
-                 <width>288</width>
-                 <height>232</height>
-                </size>
+               <property name="widgetResizable">
+                <bool>true</bool>
                </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 185, 242);</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item alignment="Qt::AlignmentFlag::AlignBottom">
-           <widget class="QWidget" name="widget_9" native="true">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>250</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>250</height>
-             </size>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_4">
-             <item alignment="Qt::AlignmentFlag::AlignLeft">
-              <widget class="QWidget" name="test2" native="true">
-               <property name="minimumSize">
-                <size>
-                 <width>288</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>288</width>
-                 <height>232</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>682</width>
+                  <height>506</height>
+                 </rect>
+                </property>
+                <layout class="QGridLayout" name="gridLayout">
+                 <item row="0" column="0">
+                  <widget class="QWidget" name="menuWidget" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </widget>
              </item>
             </layout>
@@ -772,6 +743,46 @@ QPushButton:checked{
       <property name="styleSheet">
        <string notr="true">background-color: rgb(247, 249, 255);</string>
       </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QWidget" name="test1" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>288</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>288</width>
+           <height>232</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 185, 242);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="test2" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>288</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>288</width>
+           <height>232</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>

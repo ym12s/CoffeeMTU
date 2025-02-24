@@ -15,9 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QButtonGroup, QFrame, QHBoxLayout,
-    QLabel, QLayout, QLineEdit, QMainWindow,
-    QPushButton, QSizePolicy, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QButtonGroup, QFrame, QGridLayout,
+    QHBoxLayout, QLabel, QLayout, QLineEdit,
+    QMainWindow, QPushButton, QScrollArea, QSizePolicy,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -323,47 +324,42 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addWidget(self.widget)
 
-        self.widget_10 = QWidget(self.panelMenu)
-        self.widget_10.setObjectName(u"widget_10")
+        self.menuMain = QWidget(self.panelMenu)
+        self.menuMain.setObjectName(u"menuMain")
         sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
         sizePolicy4.setHorizontalStretch(0)
         sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.widget_10.sizePolicy().hasHeightForWidth())
-        self.widget_10.setSizePolicy(sizePolicy4)
-        self.widget_10.setMinimumSize(QSize(0, 250))
-        self.widget_10.setStyleSheet(u"")
-        self.horizontalLayout_2 = QHBoxLayout(self.widget_10)
+        sizePolicy4.setHeightForWidth(self.menuMain.sizePolicy().hasHeightForWidth())
+        self.menuMain.setSizePolicy(sizePolicy4)
+        self.menuMain.setMinimumSize(QSize(0, 250))
+        self.menuMain.setStyleSheet(u"")
+        self.horizontalLayout_2 = QHBoxLayout(self.menuMain)
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setSizeConstraint(QLayout.SizeConstraint.SetMinAndMaxSize)
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.test1 = QWidget(self.widget_10)
-        self.test1.setObjectName(u"test1")
-        self.test1.setMinimumSize(QSize(288, 0))
-        self.test1.setMaximumSize(QSize(288, 232))
-        self.test1.setStyleSheet(u"")
-
-        self.horizontalLayout_2.addWidget(self.test1, 0, Qt.AlignmentFlag.AlignRight)
-
-
-        self.verticalLayout_4.addWidget(self.widget_10)
-
-        self.widget_9 = QWidget(self.panelMenu)
-        self.widget_9.setObjectName(u"widget_9")
-        self.widget_9.setMinimumSize(QSize(0, 250))
-        self.widget_9.setMaximumSize(QSize(16777215, 250))
-        self.horizontalLayout_4 = QHBoxLayout(self.widget_9)
+        self.scrollArea = QScrollArea(self.menuMain)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 682, 506))
+        self.gridLayout = QGridLayout(self.scrollAreaWidgetContents)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.menuWidget = QWidget(self.scrollAreaWidgetContents)
+        self.menuWidget.setObjectName(u"menuWidget")
+        self.horizontalLayout_4 = QHBoxLayout(self.menuWidget)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.test2 = QWidget(self.widget_9)
-        self.test2.setObjectName(u"test2")
-        self.test2.setMinimumSize(QSize(288, 0))
-        self.test2.setMaximumSize(QSize(288, 232))
-        self.test2.setStyleSheet(u"")
 
-        self.horizontalLayout_4.addWidget(self.test2, 0, Qt.AlignmentFlag.AlignLeft)
+        self.gridLayout.addWidget(self.menuWidget, 0, 0, 1, 1)
+
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+
+        self.horizontalLayout_2.addWidget(self.scrollArea)
 
 
-        self.verticalLayout_4.addWidget(self.widget_9, 0, Qt.AlignmentFlag.AlignBottom)
+        self.verticalLayout_4.addWidget(self.menuMain)
 
         self.widget_8 = QWidget(self.panelMenu)
         self.widget_8.setObjectName(u"widget_8")
@@ -386,6 +382,24 @@ class Ui_MainWindow(object):
         self.widget_2.setMinimumSize(QSize(300, 0))
         self.widget_2.setMaximumSize(QSize(300, 16777215))
         self.widget_2.setStyleSheet(u"background-color: rgb(247, 249, 255);")
+        self.horizontalLayout_5 = QHBoxLayout(self.widget_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.test1 = QWidget(self.widget_2)
+        self.test1.setObjectName(u"test1")
+        self.test1.setMinimumSize(QSize(288, 0))
+        self.test1.setMaximumSize(QSize(288, 232))
+        self.test1.setStyleSheet(u"background-color: rgb(255, 185, 242);")
+
+        self.horizontalLayout_5.addWidget(self.test1)
+
+        self.test2 = QWidget(self.widget_2)
+        self.test2.setObjectName(u"test2")
+        self.test2.setMinimumSize(QSize(288, 0))
+        self.test2.setMaximumSize(QSize(288, 232))
+        self.test2.setStyleSheet(u"")
+
+        self.horizontalLayout_5.addWidget(self.test2)
+
 
         self.horizontalLayout.addWidget(self.widget_2)
 
