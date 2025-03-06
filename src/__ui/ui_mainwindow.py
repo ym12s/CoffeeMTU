@@ -15,10 +15,6 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-<<<<<<< HEAD
-from PySide6.QtWidgets import (QApplication, QButtonGroup, QMainWindow, QPushButton,
-    QSizePolicy, QWidget)
-=======
 from PySide6.QtWidgets import (QAbstractItemView, QApplication, QButtonGroup, QComboBox,
     QFrame, QHBoxLayout, QHeaderView, QLabel,
     QLineEdit, QMainWindow, QPushButton, QScrollArea,
@@ -26,59 +22,11 @@ from PySide6.QtWidgets import (QAbstractItemView, QApplication, QButtonGroup, QC
     QTableView, QVBoxLayout, QWidget)
 import resources_rc
 import resources_rc
->>>>>>> 078f5ca (Test)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-<<<<<<< HEAD
-        MainWindow.resize(1270, 768)
-        MainWindow.setAutoFillBackground(False)
-        MainWindow.setStyleSheet(u"background-color: white;")
-        self.centralwidget = QWidget(MainWindow)
-        self.centralwidget.setObjectName(u"centralwidget")
-        self.btnHome = QPushButton(self.centralwidget)
-        self.buttonGroup = QButtonGroup(MainWindow)
-        self.buttonGroup.setObjectName(u"buttonGroup")
-        self.buttonGroup.addButton(self.btnHome)
-        self.btnHome.setObjectName(u"btnHome")
-        self.btnHome.setGeometry(QRect(220, 20, 101, 41))
-        self.btnHome.setStyleSheet(u"")
-        self.btnMenu = QPushButton(self.centralwidget)
-        self.buttonGroup.addButton(self.btnMenu)
-        self.btnMenu.setObjectName(u"btnMenu")
-        self.btnMenu.setGeometry(QRect(90, 20, 101, 41))
-        self.btnMenu.setStyleSheet(u"")
-        self.btnDonHang = QPushButton(self.centralwidget)
-        self.buttonGroup.addButton(self.btnDonHang)
-        self.btnDonHang.setObjectName(u"btnDonHang")
-        self.btnDonHang.setGeometry(QRect(350, 20, 101, 41))
-        self.btnDonHang.setStyleSheet(u"")
-        self.btnKho = QPushButton(self.centralwidget)
-        self.buttonGroup.addButton(self.btnKho)
-        self.btnKho.setObjectName(u"btnKho")
-        self.btnKho.setGeometry(QRect(480, 20, 101, 41))
-        self.btnKho.setStyleSheet(u"")
-        self.btnNhanvien = QPushButton(self.centralwidget)
-        self.buttonGroup.addButton(self.btnNhanvien)
-        self.btnNhanvien.setObjectName(u"btnNhanvien")
-        self.btnNhanvien.setGeometry(QRect(610, 20, 101, 41))
-        self.btnNhanvien.setStyleSheet(u"")
-        self.btnKhachHang = QPushButton(self.centralwidget)
-        self.buttonGroup.addButton(self.btnKhachHang)
-        self.btnKhachHang.setObjectName(u"btnKhachHang")
-        self.btnKhachHang.setGeometry(QRect(740, 20, 101, 41))
-        self.btnKhachHang.setStyleSheet(u"")
-        self.btnOder = QPushButton(self.centralwidget)
-        self.buttonGroup.addButton(self.btnOder)
-        self.btnOder.setObjectName(u"btnOder")
-        self.btnOder.setGeometry(QRect(870, 20, 101, 41))
-        self.btnOder.setStyleSheet(u"")
-        self.widget = QWidget(self.centralwidget)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(110, 170, 120, 80))
-=======
         MainWindow.setWindowModality(Qt.WindowModality.ApplicationModal)
         MainWindow.resize(1387, 793)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
@@ -4083,31 +4031,18 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_18.addWidget(self.stackedWidget)
 
->>>>>>> 078f5ca (Test)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
 
-<<<<<<< HEAD
-=======
         self.stackedWidget.setCurrentIndex(2)
 
 
->>>>>>> 078f5ca (Test)
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-<<<<<<< HEAD
-        self.btnHome.setText(QCoreApplication.translate("MainWindow", u"HOME", None))
-        self.btnMenu.setText(QCoreApplication.translate("MainWindow", u"MENU", None))
-        self.btnDonHang.setText(QCoreApplication.translate("MainWindow", u"\u0110\u01a0N H\u00c0NG", None))
-        self.btnKho.setText(QCoreApplication.translate("MainWindow", u"KHO", None))
-        self.btnNhanvien.setText(QCoreApplication.translate("MainWindow", u"NH\u00c2N VI\u00caN", None))
-        self.btnKhachHang.setText(QCoreApplication.translate("MainWindow", u"KH\u00c1CH H\u00c0NG", None))
-        self.btnOder.setText(QCoreApplication.translate("MainWindow", u"ORDER ONLINE", None))
-=======
         self.btnCart.setText("")
         self.btnAI.setText("")
         self.btnContart.setText("")
@@ -4212,6 +4147,5 @@ class Ui_MainWindow(object):
         self.lblCoffee_15.setText(QCoreApplication.translate("MainWindow", u"Order Details", None))
         self.lblCoffee_16.setText(QCoreApplication.translate("MainWindow", u"MIEN TAY CONSTRUCTION UNIVERSITY", None))
         self.btnXGH_4.setText(QCoreApplication.translate("MainWindow", u"X\u00f3a gi\u1ecf h\u00e0ng", None))
->>>>>>> 078f5ca (Test)
     # retranslateUi
 

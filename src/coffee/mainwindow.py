@@ -1,19 +1,22 @@
 import sys
 import json
-<<<<<<< HEAD
-sys.stdout.reconfigure(encoding="utf-8")
-from PySide6.QtWidgets import (QMainWindow, QButtonGroup)
-from PySide6.QtGui import QIcon
-from src.__ui.ui_mainwindow import Ui_MainWindow
-=======
 import os
 import faulthandler
 import subprocess
 import sqlite3
+
 faulthandler.enable()
-subprocess.run(["pyside6-uic", "src/__ui/form.ui", "-o", "src/__ui/ui_mainwindow.py"], check=True)
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
+
+COFFEE_DIR = os.path.dirname(os.path.abspath(__file__))
+SRC_DIR = os.path.join(COFFEE_DIR, "..") 
+
+sys.path.append(SRC_DIR)
 sys.stdout.reconfigure(encoding="utf-8")
+
+UI_FILE = os.path.join(SRC_DIR, "__ui", "ui_mainwindow.py")
+if not os.path.exists(UI_FILE):
+    subprocess.run(["pyside6-uic", os.path.join(SRC_DIR, "__ui", "form.ui"), "-o", UI_FILE], check=True)
+
 from PySide6.QtWidgets import (QApplication, QMainWindow,
                                 QButtonGroup, QLabel, QWidget,
                                 QLineEdit,  QGraphicsDropShadowEffect,
@@ -28,23 +31,12 @@ from src.coffee.Ym12 import ym12s
 from src.coffee.Ym12Circle import ym12c
 from src.YAi import yai
 from src.coffee.YSql import get_connection, DB_PATH
->>>>>>> 078f5ca (Test)
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-<<<<<<< HEAD
-        self.setWindowIcon(QIcon("src/__ass/icon.ico"))
-        self.setWindowTitle("Quản lí cà phê")
-
-        self.load_styles()  # Gọi đúng hàm
-
-        self.buttons = [self.ui.btnHome, self.ui.btnMenu,
-                        self.ui.btnDonHang, self.ui.btnKho,
-                        self.ui.btnNhanvien, self.ui.btnKhachHang, self.ui.btnOder]
-=======
         self.resize(1260,820)
         self.timer = QTimer()
         QTimer.singleShot(100, self.formload)
@@ -100,33 +92,11 @@ class MainWindow(QMainWindow):
         self.ui.centralwidget.layout().setSpacing(0)
         self.buttons = [self.ui.btnMenu, self.ui.btnContart,
                         self.ui.btnCart, self.ui.btnAI]
->>>>>>> 078f5ca (Test)
         self.buttonGroup = QButtonGroup(self)
         self.buttonGroup.setExclusive(True)
         for btn in self.buttons:
             btn.setCheckable(True)
             self.buttonGroup.addButton(btn)
-<<<<<<< HEAD
-        self.buttons[0].setChecked(False)
-
-    def load_styles(self):
-        try:
-            with open("src/__ui/style.json", "r", encoding="utf-8") as f:
-                styles = json.load(f)
-                css = "\n".join([f"{selector} {{ {rules} }}" for selector, rules in styles.items()])
-                self.setStyleSheet(css)
-        except Exception as e:
-            print("Lỗi khi load CSS:", e)
-
-
-            # self.shadow = QGraphicsDropShadowEffect()
-            # self.shadow.setBlurRadius(20)
-            # self.shadow.setXOffset(5)
-            # self.shadow.setYOffset(5)
-            # self.shadow.setColor(QColor(0, 0, 0, 180))
-            # self.ui.frame.setGraphicsEffect(self.shadow)
-
-=======
         self.buttons[0].setChecked(True)
         self.buttons[0].toggled.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))  
         self.buttons[1].toggled.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))  
@@ -304,4 +274,3 @@ class MainWindow(QMainWindow):
             print("Lỗi khi load CSS:", e)
         print(f"Read file CSS: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")  
         
->>>>>>> 078f5ca (Test)

@@ -1,7 +1,7 @@
-insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('1','Trà sữa trân châu','Trà sữa','30000.0','Trà sữa vị truyền thống với trân châu đen','src/ass/b1.png','5');
+insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('1','qưeqwe','Trà sữa','30000.0','Trà sữa vị truyền thống với trân châu đen','src/ass/b1.png','1000');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('2','Matcha Latte','Cà phê','45000.0','Latte trà xanh Nhật Bản','src/ass/b2.png','3');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('3','Cà phê sữa đá','Cà phê','25000.0','Cà phê sữa đá Việt Nam','src/ass/b3.png','7');
-insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('4','Mocha Frappuccino','Cà phê','50000.0','Cà phê đá xay Mocha','src/ass/b4.png','8');
+insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('4','Mocha Frappuccino','qweqwe','50000.0','Cà phê đá xay Mocha','src/ass/b4.png','8');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('5','Kem dâu tây','Kem','35000.0','Kem dâu tươi mát','src/ass/b5.png','4');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('6','Sinh tố bơ','Sinh tố','40000.0','Sinh tố bơ ngậy béo','src/ass/b6.png','6');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('7','Coconut Milkshake','Sinh tố','42000.0','Sữa dừa đá xay','src/ass/b7.png','5');
@@ -38,7 +38,7 @@ insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soL
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('38','Peach Tea','Trà','35000.0','Trà đào mật ong','src/ass/b38.png','8');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('39','Black Sesame Latte','Cà phê','52000.0','Latte mè đen Nhật Bản','src/ass/b39.png','4');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('40','Sinh tố xoài','Sinh tố','38000.0','Sinh tố xoài chín','src/ass/b40.png','5');
-insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('41','Cà phê Cappuccino','Cà phê','50000.0','Cappuccino nguyên bản','src/ass/b41.png','6');
+insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('41','Cà phê Cappuccino','Cà phê','2000.0','Cappuccino nguyên bản','src/ass/b41.png','6');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('42','Sinh tố mãng cầu','Sinh tố','40000.0','Sinh tố mãng cầu ngọt','src/ass/b42.png','7');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('43','Jasmine Milk Tea','Trà sữa','42000.0','Trà sữa hoa nhài thơm nhẹ','src/ass/b43.png','4');
 insert into `tb_Mon`(`idMon`,`tenMon`,`loaiMon`,`giaMon`,`ghiChu`,`hinhAnh`,`soLuong`) values('44','Kem bạc hà sô cô la','Kem','45000.0','Kem vị bạc hà mix socola','src/ass/b44.png','3');

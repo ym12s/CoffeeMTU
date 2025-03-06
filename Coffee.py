@@ -1,33 +1,35 @@
 import sys
-<<<<<<< HEAD
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
-from coffee.mainwindow import MainWindow
-from PySide6.QtWidgets import QApplication
-=======
 import subprocess
 import os
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
-subprocess.run(["pyside6-uic", "src/__ui/form.ui", "-o", "src/__ui/ui_mainwindow.py"], check=True)
-subprocess.run(["pyside6-rcc", "resources.qrc", "-o", "resources_rc.py"], check=True)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SRC_DIR = os.path.join(BASE_DIR, "src")
+COFFEE_DIR = os.path.join(SRC_DIR, "coffee")
+UI_FILE = os.path.join(SRC_DIR, "__ui", "ui_mainwindow.py")
+QRC_FILE = os.path.join(BASE_DIR, "resources_rc.py")
+
+sys.path.append(SRC_DIR)
+sys.path.append(COFFEE_DIR)
+if not os.path.exists(UI_FILE):
+    subprocess.run(["pyside6-uic", os.path.join(SRC_DIR, "__ui", "form.ui"), "-o", UI_FILE], check=True)
+
+if not os.path.exists(QRC_FILE):
+    subprocess.run(["pyside6-rcc", os.path.join(BASE_DIR, "resources.qrc"), "-o", QRC_FILE], check=True)
+
+try:
+    from src.coffee.mainwindow import MainWindow
+except ModuleNotFoundError as e:
+    print(f"LỖI: Không tìm thấy mainwindow.py! Kiểm tra lại đường dẫn. Chi tiết: {e}")
+    sys.exit(1)
 
 from PySide6.QtUiTools import QUiLoader
-from src.coffee.mainwindow import MainWindow
 from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QIcon
->>>>>>> 078f5ca (Test)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
-<<<<<<< HEAD
-    widget = MainWindow()
-    widget.show()
-    sys.exit(app.exec())
-=======
     app.setWindowIcon(QIcon("src/ass/icon.ico"))
     widget = MainWindow()
     widget.show()
     sys.exit(app.exec())            
->>>>>>> 078f5ca (Test)
