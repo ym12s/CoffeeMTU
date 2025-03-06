@@ -26,6 +26,8 @@ from PySide6.QtGui import QIcon, QPixmap, QAction, QPainter, QPainterPath, QColo
 from PySide6.QtCore import QSize, Qt, QTimer
 from PySide6.QtSql import QSqlDatabase, QSqlTableModel
 from datetime import datetime 
+print("sys.path:", sys.path)
+print("Tồn tại mainwindow.py:", os.path.exists("src/coffee/mainwindow.py"))
 from src.__ui.ui_mainwindow import Ui_MainWindow
 from src.coffee.Ym12 import ym12s
 from src.coffee.Ym12Circle import ym12c
