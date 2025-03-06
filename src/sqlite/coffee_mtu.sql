@@ -25,7 +25,10 @@ CREATE TABLE tb_NhanVien (
 CREATE TABLE tb_Mon (
     idMon INTEGER PRIMARY KEY AUTOINCREMENT,
     tenMon TEXT NOT NULL,
+<<<<<<< HEAD
     loaiMon TEXT NOT NULL,
+=======
+>>>>>>> 078f5ca (Test)
     giaMon REAL NOT NULL,
     ghiChu TEXT,
     hinhAnh TEXT

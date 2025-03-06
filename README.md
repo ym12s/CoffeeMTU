@@ -1,5 +1,6 @@
 # CoffeeMTU
 
+<<<<<<< HEAD
 ## Giới Thiệu
 CoffeeMTU là một hệ thống quản lý quán cà phê, giúp tối ưu hóa việc quản lý thực đơn, đơn hàng, kho nguyên liệu, nhân viên, khách hàng và doanh thu. Hệ thống hỗ trợ cả đặt hàng trực tuyến.
 
@@ -34,6 +35,8 @@ CoffeeMTU là một hệ thống quản lý quán cà phê, giúp tối ưu hóa
 ### 7. **Order Online**
 - Hỗ trợ đặt hàng qua ứng dụng
 
+=======
+>>>>>>> 078f5ca (Test)
 ## Công Nghệ Sử Dụng
 - **Ngôn ngữ lập trình**: Python
 - **Giao diện**: PySide6 (Qt for Python)

@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>src/ass/icon/homeBlack.png</file>
+        <file>src/ass/icon/usersWhite.png</file>
+        <file>src/ass/icon/users.png</file>
+        <file>src/ass/icon/homeWhite.png</file>
+        <file>src/ass/icon/AI.png</file>
+        <file>src/ass/icon/AIBlack.png</file>
+        <file>src/ass/icon/AIWhite.png.png</file>
+        <file>src/ass/icon/home.png</file>
+        <file>src/ass/icon/picture.png</file>
+        <file>src/ass/icon/usersBlack.png</file>
+        <file>src/ass/icon/search (1).png</file>
+        <file>src/ass/icon/search (2).png</file>
+        <file>src/ass/icon/search.png</file>
+        <file>src/ass/icon/shopping-cart (2).png</file>
+        <file>src/ass/icon/shopping-cart1.png</file>
+        <file>src/ass/icon/shopping-cart.png</file>
+        <file>src/ass/icon/heart (1).png</file>
+        <file>src/ass/icon/heart.png</file>
+        <file>src/ass/icon/user-gear.png</file>
+        <file>src/ass/icon/user-gearWhite.png</file>
+    </qresource>
+</RCC>
