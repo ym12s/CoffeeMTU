@@ -35,8 +35,6 @@ CoffeeMTU là một hệ thống quản lý quán cà phê, giúp tối ưu hóa
 ### 7. **Order Online**
 - Hỗ trợ đặt hàng qua ứng dụng
 
-=======
->>>>>>> 078f5ca (Test)
 ## Công Nghệ Sử Dụng
 - **Ngôn ngữ lập trình**: Python
 - **Giao diện**: PySide6 (Qt for Python)

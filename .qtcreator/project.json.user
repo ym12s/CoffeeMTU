@@ -103,11 +103,16 @@
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:\DNMHMNM\QLCF - Copy\build</value>
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:\DNMHMNM\QLCF - Copy\build</value>
 =======
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:\PySide6</value>
 >>>>>>> 276b51d (TEST)
 >>>>>>> 078f5ca (Test)
+=======
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:\PySide6</value>
+>>>>>>> 276b51d (TEST)
+>>>>>>> 41ccc7f (8-3)
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">0</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Build</value>
@@ -153,9 +158,12 @@
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
     <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph &quot;dwarf,4096&quot; -F 250</value>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 078f5ca (Test)
+=======
+>>>>>>> 41ccc7f (8-3)
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
@@ -163,7 +171,10 @@
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 41ccc7f (8-3)
 =======
     <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">C:\Users\Admin\AppData\Local\Programs\Python\Python313\python.exe</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
@@ -176,7 +187,10 @@
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseTerminal">false</value>
 >>>>>>> 276b51d (TEST)
+<<<<<<< HEAD
 >>>>>>> 078f5ca (Test)
+=======
+>>>>>>> 41ccc7f (8-3)
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

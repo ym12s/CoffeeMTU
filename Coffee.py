@@ -1,6 +1,6 @@
 import sys
-import os
 import subprocess
+import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(BASE_DIR, "src")
@@ -40,16 +40,14 @@ except ModuleNotFoundError as e:
     print(f"LỖI: Import thất bại! Kiểm tra lại module. Chi tiết: {e}")
     print(f"sys.path hiện tại: {sys.path}")
     sys.exit(1)
-
 from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QIcon
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
-    app.setWindowIcon(QIcon(os.path.join(BASE_DIR, "src", "ass", "icon.ico")))
-
+    app.setWindowIcon(QIcon("src/ass/icon.ico"))
     widget = MainWindow()
     widget.show()
-
-    sys.exit(app.exec())
+    sys.exit(app.exec())            
+    

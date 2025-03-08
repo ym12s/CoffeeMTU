@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "database.connections": {
         "1740932464433": {
             "host": "127.0.0.1",
@@ -39,4 +40,7 @@
             "connectionKey": "database.connections"
         }
     }
+=======
+    "database.connections": {}
+>>>>>>> 41ccc7f (8-3)
 }

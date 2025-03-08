@@ -26,9 +26,12 @@ CREATE TABLE tb_Mon (
     idMon INTEGER PRIMARY KEY AUTOINCREMENT,
     tenMon TEXT NOT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
     loaiMon TEXT NOT NULL,
 =======
 >>>>>>> 078f5ca (Test)
+=======
+>>>>>>> 41ccc7f (8-3)
     giaMon REAL NOT NULL,
     ghiChu TEXT,
     hinhAnh TEXT
@@ -42,11 +45,17 @@ CREATE TABLE tb_Loai (
 CREATE TABLE tb_DonHang (
     idDonHang INTEGER PRIMARY KEY AUTOINCREMENT,
     ngayTaoDonHang TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+<<<<<<< HEAD
     idKhachHang TEXT,
     idNhanVien TEXT,
     trangThaiDH TEXT NOT NULL CHECK (trangThaiDH IN ('Chờ xử lý', 'Đang làm', 'Hoàn thành', 'Đã hủy')),
     tongTien REAL NOT NULL,
     FOREIGN KEY (idKhachHang) REFERENCES tb_KhachHang(idKhachHang),
+=======
+    idNhanVien TEXT,
+    trangThaiDH TEXT NOT NULL CHECK (trangThaiDH IN ('Chờ xử lý', 'Đang làm', 'Hoàn thành', 'Đã hủy')),
+    tongTien REAL NOT NULL,
+>>>>>>> 41ccc7f (8-3)
     FOREIGN KEY (idNhanVien) REFERENCES tb_NhanVien(idNhanVien)
 );
 
