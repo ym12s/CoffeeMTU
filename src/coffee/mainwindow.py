@@ -156,24 +156,24 @@ class MainWindow(QMainWindow):
         else:
             self.timer.stop()    
     def AIRespone(self):
-        self.user_message = self.ui.lineEdit.text().strip()
-        if not self.user_message:
+        self.tinnhanUser = self.ui.lineEdit.text().strip()
+        if not self.tinnhanUser:
             return
-        self.ui.textBrowser.append(f"Bạn: {self.user_message}")
+        self.ui.textBrowser.append(f"Bạn: {self.tinnhanUser}")
         self.ui.lineEdit.clear()
 
-        self.thread = yai(self.user_message)
-        self.thread.response_signal.connect(self.AIDisplay)
+        self.thread = yai(self.tinnhanUser)
+        self.thread.tinHieuPhanHoi.connect(self.AIDisplay)
         self.thread.start()
 
-    def AIDisplay(self, response):
-        text_lines = self.ui.textBrowser.toPlainText().split("\n")
+    def AIDisplay(self, phanHoi):
+        txtDisplay = self.ui.textBrowser.toPlainText().split("\n")
         
-        if not text_lines or not text_lines[-1].startswith("AI:"):
-            self.ui.textBrowser.append(f"AI: {response}")
+        if not txtDisplay or not txtDisplay[-1].startswith("AI:"):
+            self.ui.textBrowser.append(f"AI: {phanHoi}")
         else:
-            text_lines[-1] = f"AI: {response}"
-            self.ui.textBrowser.setPlainText("\n".join(text_lines)) 
+            txtDisplay[-1] = f"AI: {phanHoi}"
+            self.ui.textBrowser.setPlainText("\n".join(txtDisplay)) 
     def formload (self):
         
         self.ui.btnLogin.clicked.connect(self.kiemtralogin)
@@ -198,8 +198,6 @@ class MainWindow(QMainWindow):
         self.buttons[2].toggled.connect(lambda: self.ui.stackedWidget.setCurrentIndex(5))  
         self.buttons[3].toggled.connect(lambda: self.ui.stackedWidget.setCurrentIndex(4)) 
         self.buttons[4].toggled.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2)) 
-        
-        
         
         for i in range(1,50):
             btn = getattr(self.ui, f"btnAdd{i}",None)

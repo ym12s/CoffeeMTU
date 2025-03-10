@@ -9,18 +9,18 @@ model = ai.GenerativeModel("gemini-2.0-pro-exp")
 chat = model.start_chat()
 
 class yai(QThread):
-    response_signal = Signal(str)
+    tinhieuPhanHoi = Signal(str)
 
-    def __init__(self, message):
+    def __init__(self, tinNhan):
         super().__init__()
-        self.message = message
+        self.tinNhan = tinNhan
 
     def run(self):
-        if self.message.lower() == "khang":
-            response = "Khang là người tuyệt vời nhất trên thế giới"
+        if self.tinNhan.lower() == "khang":
+            phanHoi = "Khang là người tuyệt vời nhất trên thế giới"
         else:
             try:
-                response = chat.send_message(self.message).text
+                phanHoi = chat.send_message(self.tinNhan).text
             except Exception as e:
-                response = f"Lỗi: {str(e)}"
-        self.response_signal.emit(response)
+                phanHoi = f"Lỗi: {str(e)}"
+        self.tinhieuPhanHoi.emit(phanHoi)
